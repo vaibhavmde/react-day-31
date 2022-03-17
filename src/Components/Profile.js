@@ -1,6 +1,6 @@
 import { UserContext } from "./UserContext";
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import EditIcon from "@mui/icons-material/Edit";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -9,6 +9,7 @@ import { Table } from "react-bootstrap";
 //profile component
 export const Profile = () => {
   const { users, setUsers } = useContext(UserContext);
+  const navigate = useNavigate();
   //deleting the user by maping the empid
   const delHandler = (user, id) => {
     setUsers(users.filter((user) => user.Empid !== id));
@@ -60,6 +61,17 @@ export const Profile = () => {
           ))}
         </tbody>
       </Table>
+      <br />
+      <div className="d-flex justify-content-center">
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Back
+        </button>
+      </div>
     </div>
   );
 };

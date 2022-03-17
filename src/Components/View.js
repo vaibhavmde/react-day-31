@@ -34,11 +34,13 @@ export const View = () => {
   // displaying the user details
   return (
     <>
+      <br />
       <div className="d-flex justify-content-center">
         <Box sx={{ maxWidth: 275 }}>
           <Card variant="outlined">{card}</Card>
         </Box>
       </div>
+      <br />
       <div className="d-flex justify-content-center">
         <button
           className="btn btn-primary"
