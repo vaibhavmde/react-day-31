@@ -33,13 +33,12 @@ export const Edit = () => {
           const index = users.findIndex((user) => user.Empid === id);
           var tempuserss = [...users];
           tempuserss[index] = user;
-          await setUsers(tempuserss);
+          setUsers(tempuserss);
           navigate("/profile/:id");
         }}
       >
         <FormControl>
           <TextField
-            required
             id="demo"
             focused
             color="primary"
@@ -54,7 +53,6 @@ export const Edit = () => {
         <br />
         <FormControl>
           <TextField
-            required
             id="demo"
             focused
             color="primary"
@@ -69,7 +67,8 @@ export const Edit = () => {
         <br />
         <FormControl>
           <TextField
-            disabled
+            focused
+            color="primary"
             id="demo"
             type="number"
             value={user.Empid}
@@ -83,7 +82,6 @@ export const Edit = () => {
         <br />
         <FormControl>
           <TextField
-            required
             id="demo"
             focused
             color="primary"
