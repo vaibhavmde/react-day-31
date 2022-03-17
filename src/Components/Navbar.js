@@ -10,7 +10,9 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <h3 className="navbar-brand ">React</h3>
+        <h3 className="navbar-brand " id="react">
+          React
+        </h3>
         <button
           className="navbar-toggler"
           type="button"
