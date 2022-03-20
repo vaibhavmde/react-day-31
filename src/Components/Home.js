@@ -4,7 +4,8 @@ export const Home = () => {
   return (
     <>
       <h1>UserList</h1>
-      <Users />
+      {/* displaying Users in Home */}
+      <Users />  
     </>
   );
 };
