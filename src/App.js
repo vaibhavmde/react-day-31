@@ -30,7 +30,7 @@ export default function App() {
         <Route exact path="/adduser" element={<AddUser />} />
         <Route exact path="/edit/:id" element={<Edit />} />
         <Route exact path="/profile/:id" element={<Profile />} />
-        <Route exact path="/view/:id" element={<View users={users} />} />
+        <Route exact path="/view/:id" element={<View />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </UserContext.Provider>
